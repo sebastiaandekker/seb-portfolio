@@ -2,7 +2,7 @@ datasource DS {
   // optionally set multiple providers
   // example: provider = ["sqlite", "postgresql"]
   provider = ["postgresql"]
-  url      = env("DATABASE_URL")
+  url = "***"
 }
 
 generator client {
@@ -13,13 +13,12 @@ generator client {
 // Define your own datamodels here and run `yarn redwood db save` to create
 // migrations for them.
 model Project {
-  id     Int      @id @default(autoincrement())
-  name   String
-  type   String
-  year   Int
-  text   String
-  client String
+  id    Int      @id @default(autoincrement())
+  name  String
+  type  String
+  year  Int
+  text  String
   // Scalar list support has been removed for MySQL and SQLite.
   // For PostgreSQL, Prisma is now using PostgreSQL native scalar lists(arrays) under the hood.
-  roles  String[]
+  roles String[]
 }
