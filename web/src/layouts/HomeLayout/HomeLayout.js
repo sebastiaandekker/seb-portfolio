@@ -1,12 +1,13 @@
+import Header from 'src/components/Header/Header'
+import Footer from 'src/components/Footer/Footer'
+
 const HomeLayout = ({ children }) => {
   return (
-    <main>
-      <div>Header with Logo and Menu</div>
-      <div>Intro component with Image, Logo, </div>
-
-      {children}
-      <div>Footer with Logo and Contact</div>
-    </main>
+    <div>
+      <Header />
+      <main>{children}</main>
+      <Footer />
+    </div>
   )
 }
 
