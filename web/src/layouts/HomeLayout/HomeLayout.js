@@ -3,7 +3,7 @@ import Footer from 'src/components/Footer/Footer'
 
 const HomeLayout = ({ children }) => {
   return (
-    <div>
+    <div className="container mx-auto max-w-full antialiased">
       <Header />
       <main>{children}</main>
       <Footer />
